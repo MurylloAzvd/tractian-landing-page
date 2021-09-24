@@ -1,4 +1,4 @@
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faMapMarkedAlt, faMobileAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Head from 'next/head'
 import Feature from '../components/Feature'
@@ -7,6 +7,11 @@ import imagePlatform from '../public/image-platform.png'
 import imageAlert from '../public/oneMinuteAlert.png'
 import stars from '../public/stars.svg'
 import profile from '../public/profile.png'
+import twitter from '../public/twitter-outlined.svg'
+import facebook from '../public/facebook-filled.svg'
+import linkedin from '../public/linkedin-filled.svg'
+import location from '../public/location.svg'
+import mobile from '../public/phone.svg'
 import Client from '../components/Client'
 import Plan from '../components/Plan'
 
@@ -101,6 +106,51 @@ export default function Home() {
           </div>
           <button className="my-12 text-lg text-center bg-primary text-white py-2 px-8 rounded-full">More Testomonials</button>
         </section>
+        <footer className="bg-gray-800 py-16 px-12">
+          <div className="mb-16">
+            <h3 className="text-white font-bold my-6 text-xl">Annette Steward</h3>
+            <ul>
+              <li className="text-white my-4 text-sm">Jennie Cooper</li>
+              <li className="text-white my-4 text-sm">Julie Henry</li>
+              <li className="text-white my-4 text-sm">Johnny Murphy</li>
+              <li className="text-white my-4 text-sm">Gregory Mccoy</li>
+              <li className="text-white my-4 text-sm">Marvin Mckinney</li>
+            </ul>
+          </div>
+          <div className="mb-16">
+            <h3 className="text-white font-bold my-6 text-xl">Annette Steward</h3>
+            <ul>
+              <li className="text-white my-4 text-sm">Jennie Cooper</li>
+              <li className="text-white my-4 text-sm">Julie Henry</li>
+              <li className="text-white my-4 text-sm">Johnny Murphy</li>
+              <li className="text-white my-4 text-sm">Gregory Mccoy</li>
+              <li className="text-white my-4 text-sm">Marvin Mckinney</li>
+            </ul>
+          </div>
+          <div className="mb-16">
+            <h3 className="text-white font-bold my-6 text-xl">Annette Steward</h3>
+            <ul>
+              <li className="text-white my-4 text-sm">Jennie Cooper</li>
+              <li className="text-white my-4 text-sm">Julie Henry</li>
+              <li className="text-white my-4 text-sm">Johnny Murphy</li>
+              <li className="text-white my-4 text-sm">Gregory Mccoy</li>
+              <li className="text-white my-4 text-sm">Marvin Mckinney</li>
+            </ul>
+          </div>
+          <div className="flex items-center gap-2">
+            <Image src={location} width={32} />
+            <span className="text-white text-xs">7480 Mockingbird Hill undefined</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Image src={mobile} width={32} />
+            <span className="text-white text-xs">(239) 555-0108</span>
+          </div>
+          <div className="my-6 flex items-center justify-evenly">
+            <Image src={facebook} />
+            <Image src={twitter} />
+            <Image src={linkedin} />
+          </div>
+        </footer>
       </main>
     </div>
   )
