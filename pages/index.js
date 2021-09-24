@@ -7,7 +7,8 @@ import imagePlatform from '../public/image-platform.png'
 import imageAlert from '../public/oneMinuteAlert.png'
 import stars from '../public/stars.svg'
 import profile from '../public/profile.png'
-import Cliente from '../components/Client'
+import Client from '../components/Client'
+import Plan from '../components/Plan'
 
 export default function Home() {
   return (
@@ -66,11 +67,20 @@ export default function Home() {
           <h2 className=" text-4xl">Partners</h2>
           <p className="text-lg text-gray-700 mt-4">Most calendars are designed for teams. Slate is designed for freelancers</p>
           <div className="my-12 flex flex-col items-center gap-4">
-            <Cliente />
-            <Cliente />
-            <Cliente />
+            <Client />
+            <Client />
+            <Client />
           </div>
           <button className="text-lg text-center bg-primary text-white py-2 px-12 rounded-full">Try for free</button>
+        </section>
+        <section className="bg-gray-800 py-16 px-6">
+          <h2 className="text-white text-4xl">Pricing</h2>
+          <p className="text-white mt-4">Most calendars are designed for teams. Slate is designed for teams.</p>
+          <div className="mt-12">
+            <Plan />
+            <Plan />
+            <Plan />
+          </div>
         </section>
         <section className="my-16 px-6">
           <h2 className="text-4xl">Testimonial</h2>
@@ -90,10 +100,6 @@ export default function Home() {
             </div>
           </div>
           <button className="my-12 text-lg text-center bg-primary text-white py-2 px-8 rounded-full">More Testomonials</button>
-        </section>
-        <section className="bg-gray-800 py-16 px-6">
-          <h2 className="text-white text-4xl">Pricing</h2>
-          <p className="text-white mt-4">Most calendars are designed for teams. Slate is designed for teams.</p>
         </section>
       </main>
     </div>
