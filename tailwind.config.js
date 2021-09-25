@@ -12,6 +12,9 @@ module.exports = {
       },
       backgroundImage: {
         'hero-tractian': "url('https://tractian.com/images/thumb-tractian.png')"
+      },
+      padding: {
+        iframe: '56.25%',
       }
     },
   },
