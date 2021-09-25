@@ -1,7 +1,7 @@
 export default function Plan() {
 
     return (
-        <div className="bg-white px-8 py-8 rounded-lg shadow-2xl my-6">
+        <div className="bg-white px-8 py-8 rounded-lg shadow-2xl max-w-sm">
             <span className="block font-bold">FREE</span>
             <span className="block px-8 text-base text-gray-700">Organize across all apps by hand</span>
             <div className="my-8 grid grid-cols-2 items-center gap-x-2">

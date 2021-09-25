@@ -86,8 +86,11 @@ export default function Home() {
         </section>
         <section className="my-16 px-6">
           <h2 className=" text-4xl">Partners</h2>
-          <p className="text-lg text-gray-700 mt-4">Most calendars are designed for teams. Slate is designed for freelancers</p>
-          <div className="my-12 flex flex-col items-center gap-4">
+          <p className="text-lg text-gray-700 mt-4 max-w-md mx-auto">Most calendars are designed for teams. Slate is designed for freelancers</p>
+          <div className="my-12 flex flex-col items-center gap-4 md:flex-row justify-center flex-wrap max-w-4xl mx-auto">
+            <Client />
+            <Client />
+            <Client />
             <Client />
             <Client />
             <Client />
@@ -97,7 +100,7 @@ export default function Home() {
         <section className="bg-gray-800 py-16 px-6">
           <h2 className="text-white text-4xl">Pricing</h2>
           <p className="text-white mt-4">Most calendars are designed for teams. Slate is designed for teams.</p>
-          <div className="mt-12">
+          <div className="flex flex-col justify-center items-center mt-12 lg:flex-row gap-8">
             <Plan />
             <Plan />
             <Plan />
@@ -105,10 +108,11 @@ export default function Home() {
         </section>
         <section className="my-16 px-6">
           <h2 className="text-4xl">Testimonial</h2>
-          <div className="mt-12">
+          <div className="mt-12 max-w-xs mx-auto">
             <Image src={stars} />
           </div>
-          <p className="text-gray-700 font-bold mt-6 text-sm">Most calendars are designed for teams.
+          <p className="text-gray-700 font-bold mt-6 text-sm max-w-lg mx-auto">
+            Most calendars are designed for teams.
             Slate is designed for freelancers who want a
             simple way to plan their schedule.</p>
           <div className="mt-8 flex justify-center items-center gap-2">
