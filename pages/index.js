@@ -21,6 +21,7 @@ import logoFaberCastell from '../public/clients/logo-faber-castell.png'
 import logoHeineken from '../public/clients/logo-heineken.png'
 import { useState } from 'react'
 import { FiX, FiAlignRight } from "react-icons/fi";
+import PrimaryButton from '../components/PrimaryButton'
 
 export default function Home() {
   const [openNav, setOpenNav] = useState(false)
@@ -30,9 +31,6 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-        </style>
       </Head>
 
       <header className="bg-gradient-to-l from-blue-600 to-blue-900 h-screen pt-8 px-6 flex flex-col">
@@ -47,7 +45,7 @@ export default function Home() {
               <li>Blog</li>
             </ul>
           </nav>
-          <button onClick={() => setOpenNav(true)}><FiAlignRight className="text-white text-4xl md:hidden" /></button>
+          <button className="md:hidden" onClick={() => setOpenNav(true)}><FiAlignRight className="text-white text-4xl" /></button>
         </div>
         {
           openNav &&
@@ -72,7 +70,7 @@ export default function Home() {
         <div className="flex-1 justify-center flex flex-col items-center gap-4">
           <h1 className="text-white text-3xl text-center md:text-5xl">O sistema preditivo mais completo do mercado</h1>
           <h2 className="text-white text-lg text-center md:text-2xl">Evite falhas nas suas máquinas e torne o tempo de inatividade uma coisa do passado com sistema preditivo da TRACTIAN.</h2>
-          <button className="text-lg text-center bg-primary text-white py-2 px-12 rounded-full md:text-2xl">Demonstração</button>
+          <PrimaryButton>Demonstração</PrimaryButton>
         </div>
       </header>
       <main className="text-center">
@@ -97,7 +95,7 @@ export default function Home() {
           <div className="flex flex-col items-center md:items-start max-w-sm md:text-left">
             <h1 className="text-3xl">Plataforma que trabalha por você</h1>
             <h2 className="text-lg text-gray-700 mt-4">A plataforma oferece uma visão ampla da condição da sua máquina.</h2>
-            <button className="text-lg text-center bg-primary text-white py-2 px-12 rounded-full inline-block mt-8">Demonstração</button>
+            <PrimaryButton>Demonstração</PrimaryButton>
           </div>
           <div className="w-full max-w-md">
             <Image src={imagePlatform} />
@@ -108,8 +106,8 @@ export default function Home() {
             <Image src={imageAlert} />
           </div>
           <div className="flex flex-col gap-2 items-center md:items-start">
-            <h3 className="font-bold md:text-left">Na ponta dos seus dados</h3>
-            <h2 className=" text-4xl md:text-left">Newsletter</h2>
+            <h2 className="font-bold md:text-left">Na ponta dos seus dados</h2>
+            <h1 className=" text-4xl md:text-left">Newsletter</h1>
             <div className="my-8 w-full max-w-md  md:hidden">
               <Image src={imageAlert} />
             </div>
@@ -123,7 +121,7 @@ export default function Home() {
           </div>
         </section>
         <section className="py-8 px-6">
-          <h2 className=" text-4xl">Nossos Clientes</h2>
+          <h1 className=" text-4xl">Nossos Clientes</h1>
           <p className="text-lg text-gray-700 mt-4 max-w-md mx-auto">Maiores indústrias nacionais e internacionais</p>
           <div className="my-12 flex flex-col items-center gap-4 md:flex-row justify-center flex-wrap max-w-4xl mx-auto">
             <Client icon={logoElectrolux} name="Electrolux" />
@@ -133,14 +131,14 @@ export default function Home() {
             <Client icon={logoHeineken} name="Heineken" />
             <Client icon={logoElectrolux} name="Electrolux" />
           </div>
-          <button className="text-lg text-center bg-primary text-white py-2 px-12 rounded-full">Agendar Demo</button>
+          <PrimaryButton>Agendar Demo</PrimaryButton>
         </section>
         <section className="bg-gray-800 py-8 px-6 flex flex-col justify-center items-center mt-12 lg:flex-row gap-8">
           <Plan />
           <Plan tractian />
         </section>
         <section className="py-8 px-6">
-          <h2 className="text-4xl">#1 Solução para Manutenção</h2>
+          <h1 className="text-4xl">#1 Solução para Manutenção</h1>
           <div className="mt-6 max-w-xs mx-auto">
             <Image src={stars} />
           </div>
@@ -156,54 +154,54 @@ export default function Home() {
               <span className="block">Gestor de Manutenção</span>
             </div>
           </div>
-          <button className="mt-12 text-lg text-center bg-primary text-white py-2 px-8 rounded-full">Demonstração</button>
+          <PrimaryButton>Demonstração</PrimaryButton>
         </section>
-        <footer className="bg-gray-800 py-8 px-12 flex flex-col gap-8 md:gap-16 md:flex-row justify-center md:text-left">
-          <div className="">
-            <h3 className="text-white font-bold mb-6 text-xl">SOBRE</h3>
-            <ul>
-              <li className="text-white my-4 text-sm">Trabalhe conosco</li>
-              <li className="text-white my-4 text-sm">Conheça a Tractian</li>
-              <li className="text-white my-4 text-sm">Histórias de Sucesso</li>
-              <li className="text-white my-4 text-sm">Imprensa</li>
-              <li className="text-white my-4 text-sm">Política de Privacidade</li>
-            </ul>
-          </div>
-          <div className="">
-            <h3 className="text-white font-bold mb-6 text-xl">PRODUTO</h3>
-            <ul>
-              <li className="text-white my-4 text-sm">Sensor Tractian</li>
-              <li className="text-white my-4 text-sm">Plataforma</li>
-              <li className="text-white my-4 text-sm">Funcionalidades</li>
-              <li className="text-white my-4 text-sm">Planos</li>
-            </ul>
-          </div>
-          <div className="">
-            <h3 className="text-white font-bold mb-6 text-xl">MATERIAIS</h3>
-            <ul>
-              <li className="text-white my-4 text-sm">Guias e Ebooks</li>
-              <li className="text-white my-4 text-sm">Checklists</li>
-              <li className="text-white my-4 text-sm">Calculadora</li>
-              <li className="text-white my-4 text-sm">Intensivão</li>
-            </ul>
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <Image src={location} width={32} />
-              <span className="text-white text-xs">7480 Mockingbird Hill</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Image src={mobile} width={32} />
-              <span className="text-white text-xs">(239) 555-0108</span>
-            </div>
-            <div className="mt-6 flex items-center justify-center gap-4 md:justify-start">
-              <Image src={facebook} />
-              <Image src={twitter} />
-              <Image src={linkedin} />
-            </div>
-          </div>
-        </footer>
       </main>
+      <footer className="text-center bg-gray-800 py-8 px-12 flex flex-col gap-8 md:gap-16 md:flex-row justify-center md:text-left">
+        <div className="">
+          <h1 className="text-white font-bold mb-6 text-xl">SOBRE</h1>
+          <ul>
+            <li className="text-white my-4 text-sm">Trabalhe conosco</li>
+            <li className="text-white my-4 text-sm">Conheça a Tractian</li>
+            <li className="text-white my-4 text-sm">Histórias de Sucesso</li>
+            <li className="text-white my-4 text-sm">Imprensa</li>
+            <li className="text-white my-4 text-sm">Política de Privacidade</li>
+          </ul>
+        </div>
+        <div className="">
+          <h1 className="text-white font-bold mb-6 text-xl">PRODUTO</h1>
+          <ul>
+            <li className="text-white my-4 text-sm">Sensor Tractian</li>
+            <li className="text-white my-4 text-sm">Plataforma</li>
+            <li className="text-white my-4 text-sm">Funcionalidades</li>
+            <li className="text-white my-4 text-sm">Planos</li>
+          </ul>
+        </div>
+        <div className="">
+          <h1 className="text-white font-bold mb-6 text-xl">MATERIAIS</h1>
+          <ul>
+            <li className="text-white my-4 text-sm">Guias e Ebooks</li>
+            <li className="text-white my-4 text-sm">Checklists</li>
+            <li className="text-white my-4 text-sm">Calculadora</li>
+            <li className="text-white my-4 text-sm">Intensivão</li>
+          </ul>
+        </div>
+        <div>
+          <div className="flex items-center gap-2">
+            <Image src={location} width={32} />
+            <span className="text-white text-xs">7480 Mockingbird Hill</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Image src={mobile} width={32} />
+            <span className="text-white text-xs">(239) 555-0108</span>
+          </div>
+          <div className="mt-6 flex items-center justify-center gap-4 md:justify-start">
+            <Image src={facebook} />
+            <Image src={twitter} />
+            <Image src={linkedin} />
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
