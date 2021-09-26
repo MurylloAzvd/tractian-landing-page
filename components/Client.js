@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import logoElectrolux from '../public/clients/logo-electrolux.png'
 
 export default function Cliente({ icon, name }) {
     return (
