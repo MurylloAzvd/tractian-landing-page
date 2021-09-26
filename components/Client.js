@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import logoElectrolux from '../public/logo-electrolux.png'
+import logoElectrolux from '../public/clients/logo-electrolux.png'
 
-export default function Cliente() {
+export default function Cliente({ icon, name }) {
     return (
         <div className="flex flex-col justify-center items-center border w-52">
-            <span className="mt-6">Electrolux</span>
+            <span className="mt-6">{name}</span>
             <div className="w-36">
-                <Image src={logoElectrolux} />
+                <Image src={icon} />
             </div>
         </div>
     )

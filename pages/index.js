@@ -15,6 +15,13 @@ import mobile from '../public/phone.svg'
 import tractianLogo from '../public/logo-tractian.svg'
 import Client from '../components/Client'
 import Plan from '../components/Plan'
+import horimeterIcon from '../public/icon-maintence-horimeter.svg'
+import onlineIcon from '../public/icon-maintence-online.svg'
+import plataformIcon from '../public/icon-maintence-plataform.svg'
+import pumpIcon from '../public/icon-maintence-pump.svg'
+import logoElectrolux from '../public/clients/logo-electrolux.png'
+import logoFaberCastell from '../public/clients/logo-faber-castell.png'
+import logoHeineken from '../public/clients/logo-heineken.png'
 
 export default function Home() {
   return (
@@ -59,9 +66,10 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row max-w-4xl gap-8">
-            <Feature />
-            <Feature />
-            <Feature />
+            <Feature icon={plataformIcon} title="Manutenção Preditiva" subTitle="Detecção automática de falhas, saúde do ativo em tempo real, confiabilidade e insights automáticos." />
+            <Feature icon={horimeterIcon} title="Automação de OS" subTitle="Automatize a geração de ordens de serviço com base em horas ou em dias e melhore a sua preventiva." />
+            <Feature icon={onlineIcon} title="Monitoramento Online" subTitle="Sensor Tractian coleta dados de vibração, temperatura, horímetro e consumo de energia em tempo real." />
+            <Feature icon={pumpIcon} title="Setup Instantâneo" subTitle="Solução Plug & Play, sem necessidade de gateways ou roteadores, comunicação via 2G/3G independente." />
           </div>
         </section>
         <section className="py-8 px-6 flex flex-col md:flex-row items-center justify-center">
@@ -88,27 +96,27 @@ export default function Home() {
               <p className="text-gray-700 md:text-left">Cadastre-se para receber nossa Newsletter</p>
             </div>
             <div className="md:flex gap-4">
-              <input type="text" placeholder="Insira seu email" className="bg-gray-200 w-full rounded-full py-2 px-6 mt-4" />
-              <button className="bg-primary w-full rounded-full py-2 text-white mt-2" >Enviar</button>
+              <input type="text" placeholder="Insira seu email" className="bg-gray-200 w-full rounded-full py-2 px-6 md:w-48 mt-4 md:mt-0" />
+              <button className="bg-primary w-full rounded-full py-2 text-white mt-2 md:mt-0 md:w-36" >Enviar</button>
             </div>
           </div>
         </section>
         <section className="py-8 px-6">
           <h2 className=" text-4xl">Nossos Clientes</h2>
-          <p className="text-lg text-gray-700 mt-4 max-w-md mx-auto">Maiores indústrias brasileiras e internacionais</p>
+          <p className="text-lg text-gray-700 mt-4 max-w-md mx-auto">Maiores indústrias nacionais e internacionais</p>
           <div className="my-12 flex flex-col items-center gap-4 md:flex-row justify-center flex-wrap max-w-4xl mx-auto">
-            <Client />
-            <Client />
-            <Client />
-            <Client />
-            <Client />
-            <Client />
+            <Client icon={logoElectrolux} name="Electrolux" />
+            <Client icon={logoFaberCastell} name="Faber-Castell" />
+            <Client icon={logoHeineken} name="Heineken" />
+            <Client icon={logoFaberCastell} name="Faber-Castell" />
+            <Client icon={logoHeineken} name="Heineken" />
+            <Client icon={logoElectrolux} name="Electrolux" />
           </div>
           <button className="text-lg text-center bg-primary text-white py-2 px-12 rounded-full">Agendar Demo</button>
         </section>
         <section className="bg-gray-800 py-8 px-6 flex flex-col justify-center items-center mt-12 lg:flex-row gap-8">
           <Plan />
-          <Plan />
+          <Plan tractian />
         </section>
         <section className="py-8 px-6">
           <h2 className="text-4xl">#1 Solução para Manutenção</h2>
@@ -124,10 +132,10 @@ export default function Home() {
             </div>
             <div className="text-left">
               <span className="block font-bold">Muryllo Dantas</span>
-              <span className="block">Front-end Developer</span>
+              <span className="block">Gestor de Manutenção</span>
             </div>
           </div>
-          <button className="my-12 text-lg text-center bg-primary text-white py-2 px-8 rounded-full">Demonstração</button>
+          <button className="mt-12 text-lg text-center bg-primary text-white py-2 px-8 rounded-full">Demonstração</button>
         </section>
         <footer className="bg-gray-800 py-8 px-12 flex flex-col gap-8 md:gap-16 md:flex-row justify-center md:text-left">
           <div className="">
