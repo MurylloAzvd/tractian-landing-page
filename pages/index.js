@@ -1,5 +1,3 @@
-import { faBars, faMapMarkedAlt, faMobileAlt } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Head from 'next/head'
 import Feature from '../components/Feature'
 import Image from 'next/image'
@@ -21,8 +19,12 @@ import pumpIcon from '../public/icon-maintence-pump.svg'
 import logoElectrolux from '../public/clients/logo-electrolux.png'
 import logoFaberCastell from '../public/clients/logo-faber-castell.png'
 import logoHeineken from '../public/clients/logo-heineken.png'
+import { useState } from 'react'
+import { FiX, FiAlignRight } from "react-icons/fi";
 
 export default function Home() {
+  const [openNav, setOpenNav] = useState(false)
+
   return (
     <div className="font-roboto">
       <Head>
@@ -45,8 +47,28 @@ export default function Home() {
               <li>Blog</li>
             </ul>
           </nav>
-          <FontAwesomeIcon className="text-white w-8 md:hidden" icon={faBars} />
+          <button onClick={() => setOpenNav(true)}><FiAlignRight className="text-white text-4xl md:hidden" /></button>
         </div>
+        {
+          openNav &&
+          <div className="md:hidden bg-white fixed left-0 right-0 top-0 bottom-0 z-10 pt-8 px-6">
+            <div className="flex justify-between mx-auto w-full max-w-4xl">
+              <img src="/logo-tractian-azul.svg" className="w-28 md:w-40" />
+              <button onClick={() => setOpenNav(false)}><FiX className="text-4xl" /></button>
+            </div>
+            <div className=" h-full flex flex-col justify-center">
+              <nav className="">
+                <ul className="flex gap-8 font-bold flex-col text-center text-white">
+                  <li className="bg-primary px-6 py-2 rounded-lg">Conheça o Produto</li>
+                  <li className="bg-primary px-6 py-2 rounded-lg">Planos</li>
+                  <li className="bg-primary px-6 py-2 rounded-lg">Sobre Nós</li>
+                  <li className="bg-primary px-6 py-2 rounded-lg">Contato</li>
+                  <li className="bg-primary px-6 py-2 rounded-lg">Blog</li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        }
         <div className="flex-1 justify-center flex flex-col items-center gap-4">
           <h1 className="text-white text-3xl text-center md:text-5xl">O sistema preditivo mais completo do mercado</h1>
           <h2 className="text-white text-lg text-center md:text-2xl">Evite falhas nas suas máquinas e torne o tempo de inatividade uma coisa do passado com sistema preditivo da TRACTIAN.</h2>
