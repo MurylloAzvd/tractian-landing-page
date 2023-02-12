@@ -1,36 +1,36 @@
-import Head from 'next/head'
-import Feature from '../components/Feature'
-import Image from 'next/image'
-import imagePlatform from '../public/image-platform.png'
-import imageAlert from '../public/oneMinuteAlert.png'
-import stars from '../public/stars.svg'
-import profile from '../public/profile.png'
-import twitter from '../public/twitter-outlined.svg'
-import facebook from '../public/facebook-filled.svg'
-import linkedin from '../public/linkedin-filled.svg'
-import location from '../public/location.svg'
-import mobile from '../public/phone.svg'
-import Client from '../components/Client'
-import Plan from '../components/Plan'
-import horimeterIcon from '../public/icon-maintence-horimeter.svg'
-import onlineIcon from '../public/icon-maintence-online.svg'
-import plataformIcon from '../public/icon-maintence-plataform.svg'
-import pumpIcon from '../public/icon-maintence-pump.svg'
-import logoElectrolux from '../public/clients/logo-electrolux.png'
-import logoFaberCastell from '../public/clients/logo-faber-castell.png'
-import logoHeineken from '../public/clients/logo-heineken.png'
-import { useState } from 'react'
+import Head from "next/head";
+import Feature from "../components/Feature";
+import Image from "next/image";
+import imagePlatform from "../public/image-platform.png";
+import imageAlert from "../public/oneMinuteAlert.png";
+import stars from "../public/stars.svg";
+import profile from "../public/profile.png";
+import twitter from "../public/twitter-outlined.svg";
+import facebook from "../public/facebook-filled.svg";
+import linkedin from "../public/linkedin-filled.svg";
+import location from "../public/location.svg";
+import mobile from "../public/phone.svg";
+import Client from "../components/Client";
+import Plan from "../components/Plan";
+import horimeterIcon from "../public/icon-maintence-horimeter.svg";
+import onlineIcon from "../public/icon-maintence-online.svg";
+import plataformIcon from "../public/icon-maintence-plataform.svg";
+import pumpIcon from "../public/icon-maintence-pump.svg";
+import logoElectrolux from "../public/clients/logo-electrolux.png";
+import logoFaberCastell from "../public/clients/logo-faber-castell.png";
+import logoHeineken from "../public/clients/logo-heineken.png";
+import { useState } from "react";
 import { FiX, FiAlignRight } from "react-icons/fi";
-import PrimaryButton from '../components/PrimaryButton'
+import PrimaryButton from "../components/PrimaryButton";
 
 export default function Home() {
-  const [openNav, setOpenNav] = useState(false)
+  const [openNav, setOpenNav] = useState(false);
 
   return (
     <div className="font-roboto">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Tractian</title>
+        <link rel="icon" href="/tractian-favicon.png" />
       </Head>
 
       <header className="bg-gradient-to-l from-blue-600 to-blue-900 h-screen pt-8 px-6 flex flex-col">
@@ -45,19 +45,24 @@ export default function Home() {
               <li>Blog</li>
             </ul>
           </nav>
-          <button className="md:hidden" onClick={() => setOpenNav(true)}><FiAlignRight className="text-white text-4xl" /></button>
+          <button className="md:hidden" onClick={() => setOpenNav(true)}>
+            <FiAlignRight className="text-white text-4xl" />
+          </button>
         </div>
-        {
-          openNav &&
+        {openNav && (
           <div className="md:hidden bg-white fixed left-0 right-0 top-0 bottom-0 z-10 pt-8 px-6">
             <div className="flex justify-between mx-auto w-full max-w-4xl">
               <img src="/logo-tractian-azul.svg" className="w-28 md:w-40" />
-              <button onClick={() => setOpenNav(false)}><FiX className="text-4xl" /></button>
+              <button onClick={() => setOpenNav(false)}>
+                <FiX className="text-4xl" />
+              </button>
             </div>
             <div className=" h-full flex flex-col justify-center">
               <nav className="">
                 <ul className="flex gap-8 font-bold flex-col text-center text-white">
-                  <li className="bg-primary px-6 py-2 rounded-lg">Conheça o Produto</li>
+                  <li className="bg-primary px-6 py-2 rounded-lg">
+                    Conheça o Produto
+                  </li>
                   <li className="bg-primary px-6 py-2 rounded-lg">Planos</li>
                   <li className="bg-primary px-6 py-2 rounded-lg">Sobre Nós</li>
                   <li className="bg-primary px-6 py-2 rounded-lg">Contato</li>
@@ -66,35 +71,69 @@ export default function Home() {
               </nav>
             </div>
           </div>
-        }
+        )}
         <div className="flex-1 justify-center flex flex-col items-center gap-4">
-          <h1 className="text-white text-3xl text-center md:text-5xl">O sistema preditivo mais completo do mercado</h1>
-          <h2 className="text-white text-lg text-center md:text-2xl">Evite falhas nas suas máquinas e torne o tempo de inatividade uma coisa do passado com sistema preditivo da TRACTIAN.</h2>
+          <h1 className="text-white text-3xl text-center md:text-5xl">
+            O sistema preditivo mais completo do mercado
+          </h1>
+          <h2 className="text-white text-lg text-center md:text-2xl">
+            Evite falhas nas suas máquinas e torne o tempo de inatividade uma
+            coisa do passado com sistema preditivo da TRACTIAN.
+          </h2>
           <PrimaryButton>Demonstração</PrimaryButton>
         </div>
       </header>
       <main className="text-center">
         <section className="flex flex-col items-center py-8 px-6 gap-8 md:gap-20">
           <div>
-            <h1 className="text-3xl mt-4 max-w-xl">Mantenha a sua equipe e seus ativos com o melhor desempenho</h1>
-            <h2 className="text-lg text-gray-700 mt-4 max-w-xl">Descomplicamos a manutenção preditiva evitando vários problemas</h2>
+            <h1 className="text-3xl mt-4 max-w-xl">
+              Mantenha a sua equipe e seus ativos com o melhor desempenho
+            </h1>
+            <h2 className="text-lg text-gray-700 mt-4 max-w-xl">
+              Descomplicamos a manutenção preditiva evitando vários problemas
+            </h2>
           </div>
           <div className="w-full max-w-xl mx-auto md:order-last">
             <div className="relative overflow-hidden w-full h-0 pt-iframe">
-              <iframe className="rounded-2xl absolute top-0 left-0 bottom-0 right-0 w-full h-full" src="https://www.youtube.com/embed/2JUH7Z17NEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe
+                className="rounded-2xl absolute top-0 left-0 bottom-0 right-0 w-full h-full"
+                src="https://www.youtube.com/embed/2JUH7Z17NEE"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
           <div className="flex flex-col md:flex-row max-w-4xl gap-8">
-            <Feature icon={plataformIcon} title="Manutenção Preditiva" subTitle="Detecção automática de falhas, saúde do ativo em tempo real, confiabilidade e insights automáticos." />
-            <Feature icon={horimeterIcon} title="Automação de OS" subTitle="Automatize a geração de ordens de serviço com base em horas ou em dias e melhore a sua preventiva." />
-            <Feature icon={onlineIcon} title="Monitoramento Online" subTitle="Sensor Tractian coleta dados de vibração, temperatura, horímetro e consumo de energia em tempo real." />
-            <Feature icon={pumpIcon} title="Setup Instantâneo" subTitle="Solução Plug & Play, sem necessidade de gateways ou roteadores, comunicação via 2G/3G independente." />
+            <Feature
+              icon={plataformIcon}
+              title="Manutenção Preditiva"
+              subTitle="Detecção automática de falhas, saúde do ativo em tempo real, confiabilidade e insights automáticos."
+            />
+            <Feature
+              icon={horimeterIcon}
+              title="Automação de OS"
+              subTitle="Automatize a geração de ordens de serviço com base em horas ou em dias e melhore a sua preventiva."
+            />
+            <Feature
+              icon={onlineIcon}
+              title="Monitoramento Online"
+              subTitle="Sensor Tractian coleta dados de vibração, temperatura, horímetro e consumo de energia em tempo real."
+            />
+            <Feature
+              icon={pumpIcon}
+              title="Setup Instantâneo"
+              subTitle="Solução Plug & Play, sem necessidade de gateways ou roteadores, comunicação via 2G/3G independente."
+            />
           </div>
         </section>
         <section className="py-8 px-6 flex flex-col md:flex-row items-center justify-center">
           <div className="flex flex-col items-center md:items-start max-w-sm md:text-left">
             <h1 className="text-3xl">Plataforma que trabalha por você</h1>
-            <h2 className="text-lg text-gray-700 mt-4">A plataforma oferece uma visão ampla da condição da sua máquina.</h2>
+            <h2 className="text-lg text-gray-700 mt-4">
+              A plataforma oferece uma visão ampla da condição da sua máquina.
+            </h2>
             <PrimaryButton>Demonstração</PrimaryButton>
           </div>
           <div className="w-full max-w-md">
@@ -112,17 +151,27 @@ export default function Home() {
               <Image src={imageAlert} />
             </div>
             <div>
-              <p className="text-gray-700 md:text-left">Cadastre-se para receber nossa Newsletter</p>
+              <p className="text-gray-700 md:text-left">
+                Cadastre-se para receber nossa Newsletter
+              </p>
             </div>
             <div className="md:flex gap-4">
-              <input type="text" placeholder="Insira seu email" className="bg-gray-200 w-full rounded-full py-2 px-6 md:w-48 mt-4 md:mt-0" />
-              <button className="bg-primary w-full rounded-full py-2 text-white mt-2 md:mt-0 md:w-36" >Enviar</button>
+              <input
+                type="text"
+                placeholder="Insira seu email"
+                className="bg-gray-200 w-full rounded-full py-2 px-6 md:w-48 mt-4 md:mt-0"
+              />
+              <button className="bg-primary w-full rounded-full py-2 text-white mt-2 md:mt-0 md:w-36">
+                Enviar
+              </button>
             </div>
           </div>
         </section>
         <section className="py-8 px-6">
           <h1 className=" text-4xl">Nossos Clientes</h1>
-          <p className="text-lg text-gray-700 mt-4 max-w-md mx-auto">Maiores indústrias nacionais e internacionais</p>
+          <p className="text-lg text-gray-700 mt-4 max-w-md mx-auto">
+            Maiores indústrias nacionais e internacionais
+          </p>
           <div className="my-12 flex flex-col items-center gap-4 md:flex-row justify-center flex-wrap max-w-4xl mx-auto">
             <Client icon={logoElectrolux} name="Electrolux" />
             <Client icon={logoFaberCastell} name="Faber-Castell" />
@@ -203,5 +252,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
